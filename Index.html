@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!--<!DOCTYPE html>
 <html>
 <head>
     <title>Web Admin App</title>
 
     <script src="Libs/jquery-2.1.1.min.js"></script>
+    
     <link rel="stylesheet" href="Content/styles.css" /> 
     <script src="app/app.js"></script>
     <script src="app/Scripts.js"></script>
@@ -22,7 +23,7 @@
                             [Welcome Guest!][<a href="#" id="loginlink">Login</a>/<a href="#" id="registerlink">Register</a>]
                         </span>
                         <span id="loggedUser" style="display:none;">
-                            [Welcome <span id="userinfo"></span> !] [<a href="#" id="logoutlink">LogOff</a>]
+                            [Welcome <span id="userinfo"></span> !] [<a href="#" id="logoutlink">Logout</a>]
                         </span>
                     </div>
                        <nav id="topMenu">
@@ -64,4 +65,119 @@
         </section>
     </body>
 
+</html>-->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Admin App</title>
+
+    <script src="Libs/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <!--<link rel="stylesheet" href="Content/styles.css" /> -->
+    <script src="app/app.js"></script>
+    <script src="app/Scripts.js"></script>
+
+
+</head>
+<body>
+
+
+       <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Web Administration Tool</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+                              <li><a href="#" class="active" id="homelink">Home</a></li>
+                               <li><a href="#" id="contactlink">Contacts</a></li>
+                               <li><a href="#" id="aboutlink">About</a></li>
+            </ul>
+          <ul class="nav navbar-nav navbar-right">
+                     <li>
+                         <span id="anonymousUser">
+                            [Welcome Guest!][<a href="#" id="loginlink">Login</a>/<a href="#" id="registerlink">Register</a>]
+                        </span>
+                        <span id="loggedUser" style="display:none;">
+                            [Welcome <span id="userinfo"></span> !] [<a href="#" id="logoutlink">Logout</a>]
+                        </span>
+                  </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+
+    
+    <div  class="container">
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" id="regsuccess" style="display:none;" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                    Success</div>
+            </div>
+        </div>
+
+
+        <div class="row">
+        <div class="col-md-9" id="content">
+
+        </div>
+
+        <div class="col-md-3" id="sidebar">
+          <div class="list-group">
+
+               <div id="afterloginlinks" style="display:none;">
+                          <a href="#" class="list-group-item"  id="resetpassword">Reset Password</a>
+                          <br />
+                          <br />
+                          <a href="#" class="list-group-item" id="editinfo">Edit Info</a><br />
+                          <br />
+
+                      </div>
+
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          
+          </div>
+        </div>
+            </div>
+    </div>
+      
+
+
+
+      <hr>
+
+      <footer>
+        <p>&copy; Marlabs 2015</p>
+      </footer>
+    
+
+    </body>
+
 </html>
+
+
+
+
+

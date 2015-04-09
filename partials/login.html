@@ -1,0 +1,44 @@
+﻿<script>
+    $(document).ready(function () {
+        $("#btnLogin").click(function () {
+            var username = $("#txtusername").val();
+            var password = $("#txtpassword").val();
+
+            if (WebAdminApp.UserModule.loginUser(username, password)) {
+                $("#anonymousUser").hide()
+
+                $("#loggedUser").show();
+                $("#userinfo").html(username);
+                sessionStorage.username = username;
+                $("#content").load("partials/userinfo.html");
+
+                $("#afterloginlinks").show();
+               
+            }
+            else {
+                alert("Invalid Credentials! Try again");
+            }
+        });
+    });
+</script>
+
+
+
+
+<div id="loginform">
+    <form  class="form-signin">
+        <h3 class="form-signin-heading">Please Login here...</h3>
+        <label for="inputEmail" class="sr-only">Email address</label> 
+        <input type="text" id="txtusername" class="form-control" placeholder="Enter Username" required autofocus>
+        
+        
+         <label for="inputPassword" class="sr-only">Password</label>
+        
+         <input type="password" id="txtpassword" class="form-control" placeholder="Password" required> 
+        
+        
+        <button class="btn btn-lg btn-primary btn-block" id="btnLogin" type="submit">Sign in</button>
+
+
+    </form>
+</div>
